@@ -1,5 +1,5 @@
 module.exports = {
-  defaultTitle: 'Telebud sp. z o.o',
+  defaultTitle: 'Hello Next js',
   serverConfig: {
     devPort: '5200',
   }
