@@ -1,0 +1,30 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "mainDir": ".",
+          "appBootstrap": "./src/app-bootstrap",
+          "components": "./src/components",
+          "pages": "./src/pages",
+          "staticContent": "./src/static"
+        }
+      }
+    ]
+  ]
+}

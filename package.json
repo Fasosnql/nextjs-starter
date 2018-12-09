@@ -1,0 +1,25 @@
+{
+  "name": "NextJs-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Nowak Przemyslaw",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.9.2",
+    "express": "^4.16.4",
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1"
+  }
+}
