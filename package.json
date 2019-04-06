@@ -5,21 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "node server.js",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build ./src",
+    "start": "NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "Nowak Przemyslaw",
   "license": "ISC",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.9.2",
+    "babel-plugin-styled-components": "^1.10.0",
     "express": "^4.16.4",
     "next": "^7.0.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "styled-components": "^4.1.2"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "babel-plugin-module-resolver": "^3.1.1"
+    "babel-plugin-module-resolver": "^3.2.0"
   }
 }

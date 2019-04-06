@@ -11,4 +11,12 @@ const Index = () => (
   </div>
 );
 
-export default withPage(Index);
+export default withPage(Index, {
+  title: 'Hello next Index page!',
+  metas: [
+    {
+      name: 'keywords',
+      content: 'next js'
+    }
+  ]
+});

@@ -4,6 +4,7 @@ const next = require('next');
 const config = require('./config');
 
 const dev = process.env.NODE_ENV !== 'production';
+const port = dev ? config.serverConfig.devPort : config.serverConfig.prodPort;
 const app = next({dir: './src', dev });
 const handle = app.getRequestHandler();
 
@@ -15,9 +16,9 @@ app.prepare()
       return handle(req, res)
     });
 
-    server.listen(config.serverConfig.devPort, (err) => {
+    server.listen(port, (err) => {
       if (err) throw err;
-      console.log(`> Ready on http://localhost:${config.serverConfig.devPort}`)
+      console.log(`> Ready on http://localhost:${port}`)
     })
   })
   .catch((ex) => {

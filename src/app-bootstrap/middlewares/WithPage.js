@@ -4,7 +4,12 @@ import Head from 'next/head';
 import config from 'mainDir/config';
 import DefaultHeadData from 'app-bootstrap/HeadData';
 
-function withPage(WrappedComponent, headData = {}) {
+const defaultHeadData = {
+  title: config.defaultTitle,
+  metas: []
+};
+
+function withPage(WrappedComponent, headData = defaultHeadData) {
   return class extends React.Component {
     constructor(props) {
       super(props);
@@ -14,10 +19,11 @@ function withPage(WrappedComponent, headData = {}) {
       return (
         <React.Fragment>
           <Head>
-            <title>{headData.title || config.defaultTitle}</title>
-            <DefaultHeadData>
-              {headData.headData}
-            </DefaultHeadData>
+            <title>{headData.title || defaultHeadData.title}</title>
+            <DefaultHeadData />
+            {Array.isArray(headData.metas) && headData.metas.map(meta => (
+              <meta name={meta.name} content={meta.content} key={Math.random()}/>
+            ))}
           </Head>
           <WrappedComponent {...this.props}/>
         </React.Fragment>
