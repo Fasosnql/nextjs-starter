@@ -1,22 +1,22 @@
 # Instruction
 `$ npm install`
 
-##For development
+## For development
 
 `$ npm run dev` - run app default on port `5200`
 
-##For deployment
+## For deployment
 
 `$ npm run build` - build app
 
 `$ npm start` - run app with prod flag on port `3000`
 
-###Configs
+### Configs
 
 You can change config like default title for pages and ports in file `config.js`
 
 
-####HOC withPage
+#### HOC withPage
 
 During creating new pages remember to export your page component with HOC `withPage` to keep defaultHead data like global styles or fonts.
 You can define your global link for styles or fonts or some other resources in:
@@ -51,5 +51,5 @@ as a result your `<head>` tag receive:
 ```
 
 
-####Directory aliases
+#### Directory aliases
 You can check and create new one  directory aliases in file `.babelrc`
